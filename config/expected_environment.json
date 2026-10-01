@@ -1,0 +1,27 @@
+{
+  "_comment": "Reference capture environment. tools/validate_contribution.py checks every sweep against it. Shader options are read from shaderpacks/<pack>.txt and client options from config/minecraft-options.txt.",
+  "minecraft_version": "1.21.1",
+  "loader": {"name": "fabric", "version": "0.19.5"},
+  "framebuffer": {"width": 1280, "height": 720},
+  "mods": {
+    "fabric-api": "0.116.17+1.21.1",
+    "fabricloader": "0.19.5",
+    "iris": "1.8.14-beta.1+mc1.21.1",
+    "minecraft": "1.21.1",
+    "modmenu": "11.0.4",
+    "placeholder-api": "2.4.2+1.21",
+    "sodium": "0.8.13+mc1.21.1",
+    "sodium-extra": "0.9.4+mc1.21.1"
+  },
+  "optional_mods": ["flashback", "java", "nrmc-capture"],
+  "min_capture_mod_version": "0.5.3",
+  "shader_pack": {
+    "id": "ComplementaryReimagined_r5.9.3.zip",
+    "sha256": "fed6c879e732cf7fc7bc6570ebb1def43235aa7e96f62859fbdbdbfa0b484b38",
+    "options_file": "shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt"
+  },
+  "client_options_file": "config/minecraft-options.txt",
+  "render_options": ["ao", "biomeBlendRadius", "entityShadows", "fov", "gamma", "graphicsMode", "guiScale",
+                     "mipmapLevels", "particles", "renderClouds", "renderDistance", "resourcePacks", "simulationDistance"],
+  "min_determinism_db": 75.0
+}

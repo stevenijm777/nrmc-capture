@@ -1,0 +1,20 @@
+# Build and IDE
+.gradle/
+build/
+run/
+.idea/
+*.iml
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Data and third-party content never go in git
+nrmc_data/
+shaderpacks/*.zip
+*.mp4
+*.mov
+*.npz

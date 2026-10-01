@@ -1,0 +1,5 @@
+# Python tools in tools/ (Python 3.11 or newer)
+numpy>=1.26
+pillow>=10.3
+# only to read video files in tools/compare_exports.py
+opencv-python>=4.10

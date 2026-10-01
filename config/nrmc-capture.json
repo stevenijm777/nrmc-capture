@@ -1,0 +1,38 @@
+{
+  "dataRoot": "",
+  "targetWidth": 1280,
+  "targetHeight": 720,
+  "timesOfDay": [
+    0,
+    1000,
+    3000,
+    6000,
+    9000,
+    11000,
+    12000
+  ],
+  "allTimesPerPose": true,
+  "feetOffsetMin": 0.0,
+  "feetOffsetMax": 6.0,
+  "pitchMean": 8.0,
+  "pitchStd": 25.0,
+  "pitchMin": -70.0,
+  "pitchMax": 89.0,
+  "captureDepth": true,
+  "planBiomes": [
+    "minecraft:forest"
+  ],
+  "maxPerBiome": 0,
+  "maxAttemptsPerPose": 20,
+  "maxConsecutiveFailures": 8,
+  "recoveryAttempts": 3,
+  "recoveryWaitTicks": 1200,
+  "readinessRadiusChunks": 16,
+  "stableTicks": 10,
+  "settleTicks": 60,
+  "minSettleFrames": 30,
+  "teleportTimeoutTicks": 100,
+  "chunkTimeoutTicks": 1200,
+  "maxTeleportRetries": 3,
+  "maxPendingWrites": 8
+}

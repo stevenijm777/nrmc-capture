@@ -1,0 +1,28 @@
+{
+  "contributor": "github-user",
+  "date": "YYYY-MM-DD",
+  "world": {
+    "name": "",
+    "seed": "",
+    "zones": [{"plan": "desert_train", "center": [0, 0], "radius": 384}],
+    "biomes": ["minecraft:desert"]
+  },
+  "environment": {
+    "gpu": [""],
+    "opengl": "",
+    "os": "",
+    "java": "",
+    "minecraft": "1.21.1",
+    "fabric_loader": "0.19.5",
+    "capture_mod": "0.5.3",
+    "shader": "ComplementaryReimagined_r5.9.3.zip",
+    "shader_sha256_12": "fed6c879e732"
+  },
+  "capture": {
+    "plans": [{"name": "desert_train", "scenes": 0, "passes": ["vanilla", "complementary"]}],
+    "determinism": {"scenes": 0, "median_db": 0.0, "min_db": 0.0, "fraction_below_threshold": 0.0}
+  },
+  "validation": {"verdict": "ready", "checks": {}},
+  "data": {"url": "", "sha256_files_list": "", "size_gb": 0.0},
+  "rights": "I confirm I have the right to share this data."
+}

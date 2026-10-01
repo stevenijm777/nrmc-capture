@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "nrmc-capture",
+  "version": "${version}",
+  "name": "NRMC Capture",
+  "description": "Deterministic paired-screenshot capture for the Minecraft neural rendering dataset.",
+  "authors": ["stevenijm"],
+  "license": "MIT",
+  "contact": {
+    "homepage": "https://github.com/stevenijm777/nrmc-capture",
+    "sources": "https://github.com/stevenijm777/nrmc-capture"
+  },
+  "environment": "client",
+  "entrypoints": {
+    "client": ["io.github.stevenijm777.nrmc.capture.NrmcCaptureMod"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
