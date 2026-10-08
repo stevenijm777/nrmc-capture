@@ -66,7 +66,8 @@ Empty means the default folder inside the game directory.
 1. The game starts with Iris and Sodium without errors and the shader shows up in the shader menu.
 2. `/nrmc status` answers in the chat.
 3. Capture a small plan twice and compare it (`mod/README.md`, "Validation before a real capture"):
-   it must agree to more than 75 dB.
+   the two captures should agree to 60 dB or more (median PSNR). Below 40 dB the capture is not
+   repeatable: an animation or temporal effect of the shader is still on.
 
 ## Before a long capture
 

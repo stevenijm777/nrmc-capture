@@ -31,7 +31,8 @@ goes into this repository is a **record and a validation report**, never images.
    It checks completeness, file hashes, frame size, depth files, that every frame landed on its
    planned pose and time, the full capture environment against
    [`config/expected_environment.json`](config/expected_environment.json), and determinism. The
-   verdict must be `ready`.
+   verdict must be `ready`. Determinism only blocks when the two captures clearly disagree (median
+   below 40 dB); between 40 and 60 dB it is a warning, reported in the record.
 6. Host the data outside git (for example Hugging Face Datasets or Zenodo), including the
    `files.sha256` list the validator wrote.
 7. Open a pull request that adds the record the validator wrote

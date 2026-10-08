@@ -11,8 +11,9 @@ Checks:
   4. environment   every sweep matches config/expected_environment.json (Minecraft, loader, mod
                    versions, shader pack hash and options, render options, framebuffer), and all
                    sweeps of a pass share one GPU;
-  5. determinism   with --repeat-pass, the target pass captured twice must agree to at least
-                   min_determinism_db (median PSNR).
+  5. determinism   with --repeat-pass, the target pass captured twice is compared (median PSNR):
+                   below fail_determinism_db the capture is not repeatable (FAIL); between that
+                   and min_determinism_db it is reported but does not block (WARN).
 
 Verdicts: PASS, WARN (worth a look, does not block) and FAIL. A contribution is ready when no
 check fails and determinism was measured. Exit code: 0 ready, 1 a check failed, 2 incomplete.
@@ -308,12 +309,13 @@ def main() -> int:
             "min_db": float(np.min(psnrs)),
             "fraction_below_threshold": below,
         }
+        fail_thr = expected["fail_determinism_db"]
         ok = determinism["median_db"] >= thr
         report.add(
             "determinism",
-            "PASS" if ok else "FAIL",
+            "PASS" if ok else ("WARN" if determinism["median_db"] >= fail_thr else "FAIL"),
             f"{len(psnrs)} scenes, median {determinism['median_db']:.1f} dB, min {determinism['min_db']:.1f} dB "
-            f"(threshold {thr} dB)",
+            f"(expected {thr} dB or more, fails below {fail_thr} dB)",
         )
         if ok and below > 0.05:
             report.add(

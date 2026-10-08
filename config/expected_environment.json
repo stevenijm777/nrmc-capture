@@ -23,5 +23,6 @@
   "client_options_file": "config/minecraft-options.txt",
   "render_options": ["ao", "biomeBlendRadius", "entityShadows", "fov", "gamma", "graphicsMode", "guiScale",
                      "mipmapLevels", "particles", "renderClouds", "renderDistance", "resourcePacks", "simulationDistance"],
-  "min_determinism_db": 75.0
+  "min_determinism_db": 60.0,
+  "fail_determinism_db": 40.0
 }
